@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The King Gaming - Royal Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-crown">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+                <defs>
+                    <linearGradient id="lg-load" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                        <stop offset="50%" stop-color="#8a8a93" stop-opacity="0.2"/>
+                        <stop offset="100%" stop-color="#111115" stop-opacity="0.7"/>
+                    </linearGradient>
+                </defs>
+                <path d="M10,80 L20,35 L40,50 L50,20 L60,50 L80,35 L90,80 Z"
+                    fill="url(#lg-load)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                <circle cx="20" cy="35" r="2.5" fill="#fff"/>
+                <circle cx="50" cy="20" r="3" fill="#fff"/>
+                <circle cx="80" cy="35" r="2.5" fill="#fff"/>
+                <ellipse cx="50" cy="80" rx="40" ry="6" fill="none"
+                    stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            </svg>
+        </div>
+        <div class="loading-title">THE KING GAMING</div>
+        <div class="loading-bar-wrap">
+            <div class="loading-bar" id="loadingBar"></div>
+        </div>
+        <div class="loading-percent" id="loadingPercent">0%</div>
+    </div>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <div id="intro-crown">
+            <svg class="glass-crown-intro" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="silver-glass-intro" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                        <stop offset="50%" stop-color="#8a8a93" stop-opacity="0.2"/>
+                        <stop offset="100%" stop-color="#111115" stop-opacity="0.7"/>
+                    </linearGradient>
+                </defs>
+                <path d="M10,80 L20,35 L40,50 L50,20 L60,50 L80,35 L90,80 Z"
+                    fill="url(#silver-glass-intro)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                <circle cx="20" cy="35" r="2.5" fill="#fff"/>
+                <circle cx="50" cy="20" r="3" fill="#fff"/>
+                <circle cx="80" cy="35" r="2.5" fill="#fff"/>
+                <ellipse cx="50" cy="80" rx="40" ry="6" fill="none"
+                    stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            </svg>
+            <div id="intro-title">THE KING GAMING</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-outer"></div>
+    <div id="cursor-inner"></div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <div class="bg-texture"></div>
+
+    <header class="navbar">
+        <div class="logo">THE KING <span class="sub-logo">GAMING</span> <span class="dot"></span></div>
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="#portfolio" data-ar="المعرض" data-en="Portfolio">المعرض</a></li>
+            <li><a href="#" class="team-trigger" data-ar="الانضمام للفريق" data-en="Join The Team">الانضمام للفريق</a></li>
+            <li><a href="#" class="contact-trigger" data-ar="طلب خدمة" data-en="Request Service">طلب خدمة</a></li>
+        </ul>
+        <div style="display:flex;gap:10px;align-items:center;">
+            <button class="theme-btn" id="themeBtn">☀️</button>
+            <button class="lang-btn" id="langBtn">EN</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="crown-container reveal">
+            <svg class="glass-crown" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="silver-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                        <stop offset="50%" stop-color="#8a8a93" stop-opacity="0.2"/>
+                        <stop offset="100%" stop-color="#111115" stop-opacity="0.7"/>
+                    </linearGradient>
+                </defs>
+                <path d="M10,80 L20,35 L40,50 L50,20 L60,50 L80,35 L90,80 Z"
+                    fill="url(#silver-glass)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+                <circle cx="20" cy="35" r="2.5" fill="#fff"/>
+                <circle cx="50" cy="20" r="3" fill="#fff"/>
+                <circle cx="80" cy="35" r="2.5" fill="#fff"/>
+                <ellipse cx="50" cy="80" rx="40" ry="6" fill="none"
+                    stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            </svg>
+            <div class="crown-shadow"></div>
+        </div>
+
+        <div class="brand-badge reveal">THE KING GAMING</div>
+        <div class="title-lead reveal">DIGITAL CREATIVE STUDIO</div>
+
+        <div class="status-badge reveal">
+            <span class="status-dot"></span>
+            <span data-ar="متاح للمشاريع الفاخرة — متاح للعمل"
+                  data-en="Available for Premium Projects — Open for Work">
+                متاح للمشاريع الفاخرة — متاح للعمل
+            </span>
+        </div>
+
+        <h1 class="main-title reveal">THE KING GAMING<br>
+            <span class="silver-text">ROYAL STUDIO PORTFOLIO</span>
+        </h1>
+
+        <p class="subtitle reveal"
+            data-ar="ابتكارات رقمية متكاملة وحصرية — Thumbnails، تصميم شعارات ولوجوهات، مونتاج سينمائي، وصناعة مواقع احترافية.<br>نمنح عالمك وهويتك الهيبة الملوكيّة بأعلى معايير الإبداع البصري والبرمجي الشفاف كالألماس."
+            data-en="Complete & exclusive digital creations — Thumbnails, Logo design, Cinematic editing, and professional Web development.<br>We give your world and identity a royal prestige with the highest standards of visual and technical creativity.">
+            ابتكارات رقمية متكاملة وحصرية — Thumbnails، تصميم شعارات ولوجوهات، مونتاج سينمائي، وصناعة مواقع احترافية.
+            <br>
+            نمنح عالمك وهويتك الهيبة الملوكيّة بأعلى معايير الإبداع البصري والبرمجي الشفاف كالألماس.
+        </p>
+
+        <!-- Stats Counter -->
+        <div class="stats-row reveal">
+            <div class="stat-item">
+                <span class="stat-num" data-target="4">0</span>
+                <span class="stat-plus">+</span>
+                <div class="stat-label"
+                    data-ar="سنوات خبرة"
+                    data-en="Years Experience">سنوات خبرة</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num" data-target="200">0</span>
+                <span class="stat-plus">+</span>
+                <div class="stat-label"
+                    data-ar="عميل راضٍ"
+                    data-en="Happy Clients">عميل راضٍ</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num" data-target="500">0</span>
+                <span class="stat-plus">+</span>
+                <div class="stat-label"
+                    data-ar="مشروع منجز"
+                    data-en="Projects Done">مشروع منجز</div>
+            </div>
+        </div>
+
+        <div class="hero-buttons reveal">
+            <button class="btn btn-primary contact-trigger"
+                data-ar="اطلب خدمتك الآن"
+                data-en="Request Your Service Now">اطلب خدمتك الآن</button>
+            <a href="#portfolio" class="btn btn-secondary"
+                data-ar="تصفّح المعرض"
+                data-en="Browse Portfolio">تصفّح المعرض</a>
+            <button class="btn btn-team team-trigger"
+                data-ar="انضم إلى طاقم الملوك"
+                data-en="Join The Royal Team">انضم إلى طاقم الملوك</button>
+        </div>
+
+        <div class="bottom-icons reveal">
+            <div class="icon-item">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 21h16M5 21V10l3-3h8l3 3v11M9 21v-4a3 3 0 0 1 6 0v4M4 7V4h3v2h3V4h4v2h3V4h3v3"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="icon-item">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l2.5 2.5M19 13l2.5 2.5M16.5 14.5l3 3"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title reveal"
+            data-ar="معرض الاستوديو الملكي"
+            data-en="Royal Studio Portfolio">معرض الاستوديو الملكي</h2>
+
+        <div class="filters reveal">
+            <button class="filter-btn active" data-filter="all"
+                data-ar="الكل" data-en="ALL">الكل</button>
+            <button class="filter-btn" data-filter="thumbnails"
+                data-ar="ثامنيلز" data-en="THUMBNAILS">ثامنيلز</button>
+            <button class="filter-btn" data-filter="logos"
+                data-ar="لوجوهات" data-en="LOGOS">لوجوهات</button>
+            <button class="filter-btn" data-filter="banners"
+                data-ar="بانرات" data-en="BANNERS">بانرات</button>
+            <button class="filter-btn" data-filter="discord"
+                data-ar="ديسكورد ديزاين" data-en="DISCORD DESIGN">ديسكورد ديزاين</button>
+            <button class="filter-btn" data-filter="video"
+                data-ar="مونتاج" data-en="VIDEO EDITING">مونتاج</button>
+            <button class="filter-btn" data-filter="web"
+                data-ar="مواقع" data-en="WEB DEV">مواقع</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item thumbnails reveal"><img src="images/t1.jpg" alt="Thumbnail 1"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t2.jpg" alt="Thumbnail 2"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t3.jpg" alt="Thumbnail 3"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t4.jpg" alt="Thumbnail 4"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t5.jpg" alt="Thumbnail 5"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t6.jpg" alt="Thumbnail 6"></div>
+            <div class="portfolio-item thumbnails reveal"><img src="images/t7.jpg" alt="Thumbnail 7"></div>
+            <div class="portfolio-item logos reveal"><img src="images/l1.jpg" alt="Logo 1"></div>
+            <div class="portfolio-item logos reveal"><img src="images/l2.jpg" alt="Logo 2"></div>
+            <div class="portfolio-item banners reveal"><img src="images/b1.jpg" alt="Banner 1"></div>
+            <div class="portfolio-item banners reveal"><img src="images/b2.jpg" alt="Banner 2"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d1.png" alt="Discord 1"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d2.png" alt="Discord 2"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d3.png" alt="Discord 3"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d4.png" alt="Discord 4"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d5.png" alt="Discord 5"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d6.png" alt="Discord 6"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d7.png" alt="Discord 7"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d8.png" alt="Discord 8"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d9.png" alt="Discord 9"></div>
+            <div class="portfolio-item discord reveal"><img src="images/d10.png" alt="Discord 10"></div>
+            <div class="portfolio-item video reveal"><video src="videos/V1.mp4" controls width="100%"></video></div>
+            <div class="portfolio-item video reveal"><video src="videos/V2.mp4" controls width="100%"></video></div>
+            <div class="portfolio-item video reveal"><video src="videos/V3.mp4" controls width="100%"></video></div>
+        </div>
+    </section>
+
+    <!-- Modal التواصل -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-card">
+            <button class="close-modal" id="closeModal">×</button>
+            <h3 class="modal-title"
+                data-ar="تواصل مع المَلِك"
+                data-en="Contact The King">تواصل مع المَلِك</h3>
+            <p class="modal-subtitle"
+                data-ar="اختر منصتك المفضلة لبدء الاتفاق على عملك القادم"
+                data-en="Choose your preferred platform to start your next project">
+                اختر منصتك المفضلة لبدء الاتفاق على عملك القادم
+            </p>
+            <div class="social-grid">
+                <a href="https://youtube.com/@king_10yt?si=e_A6PZH1luY3OazP" target="_blank" class="social-item">
+                    <div class="social-icon yt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="يوتيوب — YouTube" data-en="YouTube">يوتيوب — YouTube</span>
+                </a>
+                <a href="https://discord.gg/UkXHf5hz" target="_blank" class="social-item">
+                    <div class="social-icon dc">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="ديسكورد — Discord" data-en="Discord">ديسكورد — Discord</span>
+                </a>
+                <a href="https://www.tiktok.com/@the.king.gaming.10?_r=1&_t=ZS-96zRDijYfE0" target="_blank" class="social-item">
+                    <div class="social-icon tt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31 0 2.573.4 3.64 1.152.14.1.205.27.163.435-.197.77-.107 1.575.253 2.284.453.89 1.253 1.543 2.19 1.785.176.045.29.2.29.382v3.318c0 .17-.11.32-.274.364-1.127.3-2.14.942-2.91 1.837-.53.616-.9 1.34-1.077 2.127-.043.19-.21.323-.404.323h-3.35c-.23 0-.41-.2-.39-.43.14-1.5.82-2.88 1.91-3.9 1.05-1 2.45-1.58 3.92-1.63V4.604c-1.3-.12-2.5-.72-3.41-1.67A5.96 5.96 0 018.664 0h3.86zM11.99 6.84c3.08 0 5.59 2.51 5.59 5.59a5.59 5.59 0 01-8.54 4.73c-.15-.09-.2-.29-.11-.44l1.64-2.61c.09-.15.29-.2.44-.11a2.38 2.38 0 003.11-.47 2.39 2.39 0 00-.47-3.37 2.37 2.37 0 00-1.66-.41v2.52c0 .22-.18.4-.4.4H8.59c-.22 0-.4-.18-.4-.4V6.84h3.8z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="تيك توك — TikTok" data-en="TikTok">تيك توك — TikTok</span>
+                </a>
+                <a href="https://www.facebook.com/share/1XsfyCfnDA/" target="_blank" class="social-item">
+                    <div class="social-icon fb">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="فيسبوك — Facebook" data-en="Facebook">فيسبوك — Facebook</span>
+                </a>
+                <a href="https://discord.gg/ZTB4TmTzHg" target="_blank" class="social-item">
+                    <div class="social-icon dc">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="سيرفر الديسكورد" data-en="Discord Server">سيرفر الديسكورد</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal الانضمام -->
+    <div class="modal-overlay" id="teamModal">
+        <div class="modal-card">
+            <button class="close-modal" id="closeTeamModal">×</button>
+            <h3 class="modal-title"
+                data-ar="الانضمام لطاقم الملوك"
+                data-en="Join The Royal Team">الانضمام لطاقم الملوك</h3>
+            <p class="modal-subtitle"
+                data-ar="أرسل ملف أعمالك (Portfolio) والـ CV الخاص بك عبر ديسكورد أو فيسبوك لمراجعة طلبك"
+                data-en="Send your Portfolio and CV via Discord or Facebook for review">
+                أرسل ملف أعمالك (Portfolio) والـ CV الخاص بك عبر ديسكورد أو فيسبوك لمراجعة طلبك
+            </p>
+            <div class="social-grid">
+                <a href="https://discord.gg/UkXHf5hz" target="_blank" class="social-item">
+                    <div class="social-icon dc">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="قدم عبر ديسكورد (مفضل)" data-en="Apply via Discord (Preferred)">قدم عبر ديسكورد (مفضل)</span>
+                </a>
+                <a href="https://discord.gg/ZTB4TmTzHg" target="_blank" class="social-item">
+                    <div class="social-icon dc">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.298 12.298 0 0 1-1.873.894.077.077 0 0 1-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="سيرفر الديسكورد" data-en="Discord Server">سيرفر الديسكورد</span>
+                </a>
+                <a href="https://www.facebook.com/share/1XsfyCfnDA/" target="_blank" class="social-item">
+                    <div class="social-icon fb">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                        </svg>
+                    </div>
+                    <span data-ar="قدم عبر فيسبوك" data-en="Apply via Facebook">قدم عبر فيسبوك</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="intro.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
